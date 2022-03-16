@@ -1,0 +1,524 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: cpu.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "cpu.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "cpu"
+Output Format                      : NGC
+Target Device                      : xc3s700an-4-fgg484
+
+---- Source Options
+Top Module Name                    : cpu
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "reg_file.v" in library work
+Compiling verilog file "prog_mem.v" in library work
+Module <reg_file> compiled
+Compiling verilog file "alu.v" in library work
+Module <prog_mem> compiled
+Compiling verilog file "cpu.v" in library work
+Module <alu> compiled
+Module <cpu> compiled
+No errors in compilation
+Analysis of file <"cpu.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <cpu> in library <work>.
+
+Analyzing hierarchy for module <alu> in library <work>.
+
+Analyzing hierarchy for module <reg_file> in library <work>.
+
+Analyzing hierarchy for module <prog_mem> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <cpu>.
+Module <cpu> is correct for synthesis.
+ 
+Analyzing module <alu> in library <work>.
+Module <alu> is correct for synthesis.
+ 
+Analyzing module <reg_file> in library <work>.
+Module <reg_file> is correct for synthesis.
+ 
+Analyzing module <prog_mem> in library <work>.
+Module <prog_mem> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <alu>.
+    Related source file is "alu.v".
+    Found 8-bit 11-to-1 multiplexer for signal <alu_out>.
+    Found 8-bit adder for signal <alu_out$addsub0000>.
+    Found 8-bit xor2 for signal <alu_out$xor0000> created at line 21.
+    Found 8-bit adder carry out for signal <AUX_3$addsub0000>.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred   8 Multiplexer(s).
+Unit <alu> synthesized.
+
+
+Synthesizing Unit <reg_file>.
+    Related source file is "reg_file.v".
+    Found 8-bit 16-to-1 multiplexer for signal <a>.
+    Found 8-bit 16-to-1 multiplexer for signal <b>.
+    Found 1-bit register for signal <E>.
+    Found 8-bit 16-to-1 multiplexer for signal <gpo>.
+    Found 8-bit comparator equal for signal <condjump_unsatisfied$cmp_eq0003> created at line 94.
+    Found 8-bit comparator greater for signal <condjump_unsatisfied$cmp_gt0000> created at line 94.
+    Found 1-bit register for signal <F>.
+    Found 128-bit register for signal <register>.
+    Found 8-bit adder for signal <register_14$add0000> created at line 64.
+    Found 8-bit adder for signal <register_15$share0000>.
+    Summary:
+	inferred 130 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred  24 Multiplexer(s).
+Unit <reg_file> synthesized.
+
+
+Synthesizing Unit <prog_mem>.
+    Related source file is "prog_mem.v".
+WARNING:Xst:1781 - Signal <rom> is used but never assigned. Tied to default value.
+    Found 256x16-bit ROM for signal <$COND_7>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <prog_mem> synthesized.
+
+
+Synthesizing Unit <cpu>.
+    Related source file is "cpu.v".
+Unit <cpu> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 256x16-bit ROM                                        : 1
+# Adders/Subtractors                                   : 5
+ 8-bit adder                                           : 3
+ 8-bit adder carry out                                 : 1
+ 9-bit subtractor                                      : 1
+# Registers                                            : 18
+ 1-bit register                                        : 2
+ 8-bit register                                        : 16
+# Comparators                                          : 2
+ 8-bit comparator equal                                : 1
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 4
+ 8-bit 11-to-1 multiplexer                             : 1
+ 8-bit 16-to-1 multiplexer                             : 3
+# Xors                                                 : 1
+ 8-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <register_13_0> (without init value) has a constant value of 0 in block <reg_file>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <register_13_1> (without init value) has a constant value of 0 in block <reg_file>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <register_13_2> (without init value) has a constant value of 0 in block <reg_file>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <register_13_3> (without init value) has a constant value of 0 in block <reg_file>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <register_13_4> (without init value) has a constant value of 0 in block <reg_file>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <register_13_5> (without init value) has a constant value of 0 in block <reg_file>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <register_13_6> (without init value) has a constant value of 0 in block <reg_file>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <register_13_7> (without init value) has a constant value of 0 in block <reg_file>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <F> (without init value) has a constant value of 0 in block <reg_file>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 256x16-bit ROM                                        : 1
+# Adders/Subtractors                                   : 5
+ 8-bit adder                                           : 3
+ 8-bit adder carry out                                 : 1
+ 9-bit subtractor                                      : 1
+# Registers                                            : 130
+ Flip-Flops                                            : 130
+# Comparators                                          : 2
+ 8-bit comparator equal                                : 1
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 4
+ 8-bit 11-to-1 multiplexer                             : 1
+ 8-bit 16-to-1 multiplexer                             : 3
+# Xors                                                 : 1
+ 8-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <register_13_0> (without init value) has a constant value of 0 in block <reg_file>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <register_13_1> (without init value) has a constant value of 0 in block <reg_file>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <register_13_2> (without init value) has a constant value of 0 in block <reg_file>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <register_13_3> (without init value) has a constant value of 0 in block <reg_file>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <register_13_4> (without init value) has a constant value of 0 in block <reg_file>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <register_13_5> (without init value) has a constant value of 0 in block <reg_file>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <register_13_6> (without init value) has a constant value of 0 in block <reg_file>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <register_13_7> (without init value) has a constant value of 0 in block <reg_file>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <F> (without init value) has a constant value of 0 in block <reg_file>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <cpu> ...
+
+Optimizing unit <alu> ...
+
+Optimizing unit <reg_file> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block cpu, actual ratio is 4.
+FlipFlop reg_file/register_15_0 has been replicated 2 time(s)
+FlipFlop reg_file/register_15_1 has been replicated 1 time(s)
+FlipFlop reg_file/register_15_2 has been replicated 1 time(s)
+FlipFlop reg_file/register_15_3 has been replicated 2 time(s)
+FlipFlop reg_file/register_15_4 has been replicated 1 time(s)
+FlipFlop reg_file/register_15_5 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 129
+ Flip-Flops                                            : 129
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : cpu.ngr
+Top Level Output File Name         : cpu
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 48
+
+Cell Usage :
+# BELS                             : 806
+#      GND                         : 1
+#      INV                         : 2
+#      LUT2                        : 53
+#      LUT2_D                      : 3
+#      LUT2_L                      : 3
+#      LUT3                        : 202
+#      LUT3_D                      : 3
+#      LUT3_L                      : 3
+#      LUT4                        : 230
+#      LUT4_D                      : 14
+#      LUT4_L                      : 15
+#      MUXCY                       : 23
+#      MUXF5                       : 148
+#      MUXF6                       : 56
+#      MUXF7                       : 24
+#      VCC                         : 1
+#      XORCY                       : 25
+# FlipFlops/Latches                : 129
+#      FDR                         : 16
+#      FDRE                        : 112
+#      FDRS                        : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 39
+#      IBUF                        : 5
+#      OBUF                        : 34
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s700anfgg484-4 
+
+ Number of Slices:                      279  out of   5888     4%  
+ Number of Slice Flip Flops:            129  out of  11776     1%  
+ Number of 4 input LUTs:                528  out of  11776     4%  
+ Number of IOs:                          48
+ Number of bonded IOBs:                  40  out of    372    10%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clock                              | BUFGP                  | 129   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 15.410ns (Maximum Frequency: 64.892MHz)
+   Minimum input arrival time before clock: 4.222ns
+   Maximum output required time after clock: 15.070ns
+   Maximum combinational path delay: 8.710ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 15.410ns (frequency: 64.892MHz)
+  Total number of paths / destination ports: 3226846 / 243
+-------------------------------------------------------------------------
+Delay:               15.410ns (Levels of Logic = 15)
+  Source:            reg_file/register_15_2_1 (FF)
+  Destination:       reg_file/register_15_6 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: reg_file/register_15_2_1 to reg_file/register_15_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             12   0.591   0.993  reg_file/register_15_2_1 (reg_file/register_15_2_1)
+     LUT3:I2->O            2   0.648   0.479  prog_mem/Mrom__COND_7261 (prog_mem/Mrom__COND_726)
+     LUT3:I2->O            1   0.648   0.000  prog_mem/Mrom__COND_7291_4_SW0_G (N253)
+     MUXF5:I1->O           1   0.276   0.452  prog_mem/Mrom__COND_7291_4_SW0 (N96)
+     LUT3:I2->O            1   0.648   0.000  prog_mem/Mrom__COND_7291_4 (prog_mem/Mrom__COND_7291_4)
+     MUXF5:I0->O          67   0.276   1.353  prog_mem/Mrom__COND_7291_2_f5 (raddr1<0>)
+     LUT2:I1->O            1   0.643   0.000  reg_file/Mmux_a_6 (reg_file/Mmux_a_6)
+     MUXF5:I0->O           1   0.276   0.000  reg_file/Mmux_a_4_f5 (reg_file/Mmux_a_4_f5)
+     MUXF6:I1->O           1   0.291   0.000  reg_file/Mmux_a_3_f6 (reg_file/Mmux_a_3_f6)
+     MUXF7:I1->O          11   0.291   1.076  reg_file/Mmux_a_2_f7 (a<0>)
+     LUT4:I0->O            1   0.648   0.452  reg_file/condjump_unsatisfied_cmp_eq000012 (reg_file/condjump_unsatisfied_cmp_eq000012)
+     LUT4_D:I2->LO         1   0.648   0.103  reg_file/condjump_unsatisfied_and000464 (N337)
+     LUT4:I3->O            9   0.648   0.823  reg_file/condjump_unsatisfied_and0004133 (reg_file/condjump_unsatisfied)
+     LUT4:I3->O            1   0.648   0.420  reg_file/register_15_mux0000<6>_SW0 (N87)
+     MUXF5:S->O            1   0.756   0.423  reg_file/wdata<6>55_SW2 (N241)
+     LUT4:I3->O            1   0.648   0.000  reg_file/register_15_mux0000<6> (reg_file/register_15_mux0000<6>)
+     FDR:D                     0.252          reg_file/register_15_6
+    ----------------------------------------
+    Total                     15.410ns (8.836ns logic, 6.574ns route)
+                                       (57.3% logic, 42.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 129 / 129
+-------------------------------------------------------------------------
+Offset:              4.222ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       reg_file/E (FF)
+  Destination Clock: clock rising
+
+  Data Path: reset to reg_file/E
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.849   1.436  reset_IBUF (reset_IBUF)
+     LUT4:I0->O            1   0.648   0.420  reg_file/E_or0000 (reg_file/E_or0000)
+     FDRS:R                    0.869          reg_file/E
+    ----------------------------------------
+    Total                      4.222ns (2.366ns logic, 1.856ns route)
+                                       (56.0% logic, 44.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 3707 / 34
+-------------------------------------------------------------------------
+Offset:              15.070ns (Levels of Logic = 7)
+  Source:            reg_file/register_15_6 (FF)
+  Destination:       vmem_we (PAD)
+  Source Clock:      clock rising
+
+  Data Path: reg_file/register_15_6 to vmem_we
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             21   0.591   1.131  reg_file/register_15_6 (reg_file/register_15_6)
+     LUT4_D:I3->O         16   0.648   1.114  prog_mem/Mrom__COND_7171511 (N01)
+     LUT4:I1->O            1   0.643   0.423  prog_mem/Mrom__COND_75315416 (prog_mem/Mrom__COND_75315416)
+     LUT4_D:I3->O          3   0.648   0.534  prog_mem/Mrom__COND_75315427 (N18)
+     LUT4_D:I3->O         32   0.648   1.294  prog_mem/Mrom__COND_7531544 (opcode<3>)
+     LUT3:I2->O           15   0.648   1.160  reg_file/condjump_unsatisfied_and000421 (reg_file/normal_op_and0000)
+     LUT3:I0->O            1   0.648   0.420  reg_file/vmem_we_and00001 (vmem_we_OBUF)
+     OBUF:I->O                 4.520          vmem_we_OBUF (vmem_we)
+    ----------------------------------------
+    Total                     15.070ns (8.994ns logic, 6.076ns route)
+                                       (59.7% logic, 40.3% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 120 / 8
+-------------------------------------------------------------------------
+Delay:               8.710ns (Levels of Logic = 6)
+  Source:            SW<0> (PAD)
+  Destination:       gpo<7> (PAD)
+
+  Data Path: SW<0> to gpo<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.849   1.415  SW_0_IBUF (SW_0_IBUF)
+     LUT3:I0->O            1   0.648   0.000  reg_file/Mmux_gpo_5 (reg_file/Mmux_gpo_5)
+     MUXF5:I1->O           1   0.276   0.000  reg_file/Mmux_gpo_4_f5 (reg_file/Mmux_gpo_4_f5)
+     MUXF6:I1->O           1   0.291   0.000  reg_file/Mmux_gpo_3_f6 (reg_file/Mmux_gpo_3_f6)
+     MUXF7:I1->O           1   0.291   0.420  reg_file/Mmux_gpo_2_f7 (gpo_0_OBUF)
+     OBUF:I->O                 4.520          gpo_0_OBUF (gpo<0>)
+    ----------------------------------------
+    Total                      8.710ns (6.875ns logic, 1.835ns route)
+                                       (78.9% logic, 21.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.71 secs
+ 
+--> 
+
+Total memory usage is 4513256 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   19 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

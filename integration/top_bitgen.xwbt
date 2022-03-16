@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\FPGA\integration\top.ncd
+OUTFILE=C:\FPGA\integration\top.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s700an-4fgg484
+WORKINGDIR=C:\FPGA\integration
+LICENSE=WebPack
+USER_INFO=212302188_0_0_511

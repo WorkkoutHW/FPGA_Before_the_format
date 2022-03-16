@@ -1,0 +1,387 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: D_reg.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "D_reg.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "D_reg"
+Output Format                      : NGC
+Target Device                      : xc3s700an-4-fgg484
+
+---- Source Options
+Top Module Name                    : D_reg
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "D_reg.v" in library work
+Module <D_reg> compiled
+No errors in compilation
+Analysis of file <"D_reg.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <D_reg> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <D_reg>.
+Module <D_reg> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <D_reg>.
+    Related source file is "D_reg.v".
+    Found 4-bit register for signal <Data_out>.
+    Found 27-bit up counter for signal <leds_r>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   4 D-type flip-flop(s).
+Unit <D_reg> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 27-bit up counter                                     : 1
+# Registers                                            : 1
+ 4-bit register                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 27-bit up counter                                     : 1
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <D_reg> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block D_reg, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 31
+ Flip-Flops                                            : 31
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : D_reg.ngr
+Top Level Output File Name         : D_reg
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 10
+
+Cell Usage :
+# BELS                             : 82
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 26
+#      MUXCY                       : 26
+#      VCC                         : 1
+#      XORCY                       : 27
+# FlipFlops/Latches                : 31
+#      FD                          : 27
+#      FDR                         : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 9
+#      IBUF                        : 5
+#      OBUF                        : 4
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s700anfgg484-4 
+
+ Number of Slices:                       15  out of   5888     0%  
+ Number of Slice Flip Flops:             27  out of  11776     0%  
+ Number of 4 input LUTs:                 27  out of  11776     0%  
+ Number of IOs:                          10
+ Number of bonded IOBs:                  10  out of    372     2%  
+    IOB Flip Flops:                       4
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+leds_r_26                          | NONE(Data_out_0)       | 4     |
+clock                              | BUFGP                  | 27    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 5.090ns (Maximum Frequency: 196.464MHz)
+   Minimum input arrival time before clock: 2.305ns
+   Maximum output required time after clock: 5.531ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 5.090ns (frequency: 196.464MHz)
+  Total number of paths / destination ports: 378 / 27
+-------------------------------------------------------------------------
+Delay:               5.090ns (Levels of Logic = 27)
+  Source:            leds_r_1 (FF)
+  Destination:       leds_r_26 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: leds_r_1 to leds_r_26
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.591   0.563  leds_r_1 (leds_r_1)
+     LUT1:I0->O            1   0.648   0.000  Mcount_leds_r_cy<1>_rt (Mcount_leds_r_cy<1>_rt)
+     MUXCY:S->O            1   0.632   0.000  Mcount_leds_r_cy<1> (Mcount_leds_r_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_leds_r_cy<2> (Mcount_leds_r_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_leds_r_cy<3> (Mcount_leds_r_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_leds_r_cy<4> (Mcount_leds_r_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_leds_r_cy<5> (Mcount_leds_r_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_leds_r_cy<6> (Mcount_leds_r_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_leds_r_cy<7> (Mcount_leds_r_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_leds_r_cy<8> (Mcount_leds_r_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_leds_r_cy<9> (Mcount_leds_r_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_leds_r_cy<10> (Mcount_leds_r_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_leds_r_cy<11> (Mcount_leds_r_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_leds_r_cy<12> (Mcount_leds_r_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_leds_r_cy<13> (Mcount_leds_r_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_leds_r_cy<14> (Mcount_leds_r_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_leds_r_cy<15> (Mcount_leds_r_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_leds_r_cy<16> (Mcount_leds_r_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_leds_r_cy<17> (Mcount_leds_r_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_leds_r_cy<18> (Mcount_leds_r_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_leds_r_cy<19> (Mcount_leds_r_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_leds_r_cy<20> (Mcount_leds_r_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_leds_r_cy<21> (Mcount_leds_r_cy<21>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_leds_r_cy<22> (Mcount_leds_r_cy<22>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_leds_r_cy<23> (Mcount_leds_r_cy<23>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_leds_r_cy<24> (Mcount_leds_r_cy<24>)
+     MUXCY:CI->O           0   0.065   0.000  Mcount_leds_r_cy<25> (Mcount_leds_r_cy<25>)
+     XORCY:CI->O           1   0.844   0.000  Mcount_leds_r_xor<26> (Result<26>)
+     FD:D                      0.252          leds_r_26
+    ----------------------------------------
+    Total                      5.090ns (4.527ns logic, 0.563ns route)
+                                       (88.9% logic, 11.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'leds_r_26'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              2.305ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       Data_out_0 (FF)
+  Destination Clock: leds_r_26 rising
+
+  Data Path: reset to Data_out_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   0.849   0.587  reset_IBUF (reset_IBUF)
+     FDR:R                     0.869          Data_out_0
+    ----------------------------------------
+    Total                      2.305ns (1.718ns logic, 0.587ns route)
+                                       (74.5% logic, 25.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'leds_r_26'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              5.531ns (Levels of Logic = 1)
+  Source:            Data_out_3 (FF)
+  Destination:       Data_out<3> (PAD)
+  Source Clock:      leds_r_26 rising
+
+  Data Path: Data_out_3 to Data_out<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.591   0.420  Data_out_3 (Data_out_3)
+     OBUF:I->O                 4.520          Data_out_3_OBUF (Data_out<3>)
+    ----------------------------------------
+    Total                      5.531ns (5.111ns logic, 0.420ns route)
+                                       (92.4% logic, 7.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.71 secs
+ 
+--> 
+
+Total memory usage is 4497072 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

@@ -1,0 +1,2 @@
+verilog work "ipcore_dir/myrom.v"
+verilog work "vga_char_rom.v"

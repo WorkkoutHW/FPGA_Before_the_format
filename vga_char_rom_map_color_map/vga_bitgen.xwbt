@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\FPGA\vga_char_rom_map_color_map\vga.ncd
+OUTFILE=C:\FPGA\vga_char_rom_map_color_map\vga.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s700an-4fgg484
+WORKINGDIR=C:\FPGA\vga_char_rom_map_color_map
+LICENSE=WebPack
+USER_INFO=212302188_0_0_511

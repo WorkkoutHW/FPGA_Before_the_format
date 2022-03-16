@@ -1,0 +1,22 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Dec 02 15:37:15 2021
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "SW<0>" LOCATE = SITE "V8" LEVEL 1;
+COMP "SW<1>" LOCATE = SITE "U10" LEVEL 1;
+COMP "SW<2>" LOCATE = SITE "U8" LEVEL 1;
+COMP "SW<3>" LOCATE = SITE "T9" LEVEL 1;
+COMP "clock" LOCATE = SITE "E12" LEVEL 1;
+COMP "reset" LOCATE = SITE "T14" LEVEL 1;
+COMP "gpo<0>" LOCATE = SITE "R20" LEVEL 1;
+COMP "gpo<1>" LOCATE = SITE "T19" LEVEL 1;
+COMP "gpo<2>" LOCATE = SITE "U20" LEVEL 1;
+COMP "gpo<3>" LOCATE = SITE "U19" LEVEL 1;
+COMP "gpo<4>" LOCATE = SITE "V19" LEVEL 1;
+COMP "gpo<5>" LOCATE = SITE "V20" LEVEL 1;
+COMP "gpo<6>" LOCATE = SITE "Y22" LEVEL 1;
+COMP "gpo<7>" LOCATE = SITE "W21" LEVEL 1;
+NET "clock_BUFGP/IBUFG" PERIOD = 20 ns HIGH 40%;
+SCHEMATIC END;
+

@@ -1,0 +1,19 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Nov 08 22:03:17 2021
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "DATA_OUT<0>" LOCATE = SITE "R20" LEVEL 1;
+COMP "DATA_OUT<1>" LOCATE = SITE "T19" LEVEL 1;
+COMP "ADDRESS<0>" LOCATE = SITE "V8" LEVEL 1;
+COMP "DATA_OUT<2>" LOCATE = SITE "U20" LEVEL 1;
+COMP "ADDRESS<1>" LOCATE = SITE "U10" LEVEL 1;
+COMP "DATA_OUT<3>" LOCATE = SITE "U19" LEVEL 1;
+COMP "ADDRESS<2>" LOCATE = SITE "U8" LEVEL 1;
+COMP "DATA_OUT<4>" LOCATE = SITE "V19" LEVEL 1;
+COMP "DATA_OUT<5>" LOCATE = SITE "V20" LEVEL 1;
+COMP "DATA_OUT<6>" LOCATE = SITE "Y22" LEVEL 1;
+COMP "DATA_OUT<7>" LOCATE = SITE "W21" LEVEL 1;
+COMP "CLK_50M" LOCATE = SITE "E12" LEVEL 1;
+SCHEMATIC END;
+

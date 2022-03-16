@@ -1,0 +1,2 @@
+MO vga NULL vga_char_rom.v vlg6A/vga.bin 1636378368
+MO myrom NULL ipcore_dir/myrom.v vlg6C/myrom.bin 1636378368

@@ -1,0 +1,54 @@
+#:C9     
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.20131013
+#Current Working Directory:
+#:D   C:\FPGA\vga_char_rom_map
+#Date/Time:
+#:T   Sat Nov 13 18:11:33 2021
+#------------------------------
+	#Reading vga.ncd...
+	#Loading device for application Rf_Device from file '3s700a.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+	#   "vga" is an NCD, version 3.2, device xc3s700an, package fgg484, speed -4
+	#Design creation date: 2021.11.13.09.09.42
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+unselect -all
+	#3
+select site 'SLICE_X40Y36'
+	#site "SLICE_X40Y36",  type = SLICEM  (RPM grid X101Y38)
+	#4
+unselect -all
+	#5
+unselect -all
+	#6
+unselect -all
+	#7
+unselect -all
+	#8
+select site 'SLICE_X30Y49'
+	#site "SLICE_X30Y49",  type = SLICEM  (RPM grid X81Y51)
+	#9
+unselect -all
+	#10
+select site 'SLICE_X30Y49'
+	#site "SLICE_X30Y49",  type = SLICEM  (RPM grid X81Y51)
+	#11
+post block
+	#12
+unselect -all
+	#13
+select site 'SLICE_X30Y49'
+	#site "SLICE_X30Y49",  type = SLICEM  (RPM grid X81Y51)
+	#14
+post block
+	#15
+unselect -all
+	#16
+select site 'SLICE_X30Y49'
+	#site "SLICE_X30Y49",  type = SLICEM  (RPM grid X81Y51)
+	#17
+post block

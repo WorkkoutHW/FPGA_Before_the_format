@@ -1,0 +1,13 @@
+xst -intstyle ise -ifn "C:/FPGA/D_reg/D_reg.xst" -ofn "C:/FPGA/D_reg/D_reg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s700an-fgg484-4 D_reg.ngc D_reg.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o D_reg_map.ncd D_reg.ngd D_reg.pcf 
+par -w -intstyle ise -ol high -t 1 D_reg_map.ncd D_reg.ncd D_reg.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml D_reg.twx D_reg.ncd -o D_reg.twr D_reg.pcf 
+bitgen -intstyle ise -f D_reg.ut D_reg.ncd 
+xst -intstyle ise -ifn "C:/FPGA/D_reg/D_reg.xst" -ofn "C:/FPGA/D_reg/D_reg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc D_reg.ucf -p xc3s700an-fgg484-4 D_reg.ngc D_reg.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc D_reg.ucf -p xc3s700an-fgg484-4 D_reg.ngc D_reg.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o D_reg_map.ncd D_reg.ngd D_reg.pcf 
+par -w -intstyle ise -ol high -t 1 D_reg_map.ncd D_reg.ncd D_reg.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml D_reg.twx D_reg.ncd -o D_reg.twr D_reg.pcf -ucf D_reg.ucf 
+bitgen -intstyle ise -f D_reg.ut D_reg.ncd 

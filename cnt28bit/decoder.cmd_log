@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "C:/FPGA/cnt28bit/decoder.xst" -ofn "C:/FPGA/cnt28bit/decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cnt28bit.ucf -p xc3s700an-fgg484-4 decoder.ngc decoder.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o decoder_map.ncd decoder.ngd decoder.pcf 
+par -w -intstyle ise -ol high -t 1 decoder_map.ncd decoder.ncd decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml decoder.twx decoder.ncd -o decoder.twr decoder.pcf -ucf cnt28bit.ucf 
+bitgen -intstyle ise -f decoder.ut decoder.ncd 

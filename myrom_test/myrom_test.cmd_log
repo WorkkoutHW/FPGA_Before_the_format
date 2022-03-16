@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "C:/FPGA/myrom_test/myrom_test.xst" -ofn "C:/FPGA/myrom_test/myrom_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc myrom_test.ucf -p xc3s700an-fgg484-4 myrom_test.ngc myrom_test.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc myrom_test.ucf -p xc3s700an-fgg484-4 myrom_test.ngc myrom_test.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o myrom_test_map.ncd myrom_test.ngd myrom_test.pcf 
+par -w -intstyle ise -ol high -t 1 myrom_test_map.ncd myrom_test.ncd myrom_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml myrom_test.twx myrom_test.ncd -o myrom_test.twr myrom_test.pcf -ucf myrom_test.ucf 
+bitgen -intstyle ise -f myrom_test.ut myrom_test.ncd 

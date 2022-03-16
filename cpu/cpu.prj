@@ -1,0 +1,4 @@
+verilog work "reg_file.v"
+verilog work "prog_mem.v"
+verilog work "alu.v"
+verilog work "cpu.v"

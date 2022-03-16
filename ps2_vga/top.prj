@@ -1,0 +1,5 @@
+verilog work "ipcore_dir/map_ram.v"
+verilog work "ipcore_dir/char_rom.v"
+verilog work "vga_char_rom_map_modified.v"
+verilog work "ps2_rx_code_filter_modified.v"
+verilog work "top.v"

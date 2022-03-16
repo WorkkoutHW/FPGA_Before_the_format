@@ -1,0 +1,4 @@
+MO cpu NULL cpu.v vlg50/cpu.bin 1638427015
+MO reg_file NULL reg_file.v vlg69/reg__file.bin 1638427015
+MO prog_mem NULL prog_mem.v vlg12/prog__mem.bin 1638427015
+MO alu NULL alu.v vlg0A/alu.bin 1638427015

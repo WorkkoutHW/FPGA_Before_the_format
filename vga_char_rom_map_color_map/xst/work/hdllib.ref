@@ -1,0 +1,4 @@
+MO color_map_rom NULL ipcore_dir/color_map_rom.v vlg59/color__map__rom.bin 1637043214
+MO vga NULL vga_char_rom_map_color_map.v vlg6A/vga.bin 1637043214
+MO map_rom NULL ipcore_dir/map_rom.v vlg77/map__rom.bin 1637043214
+MO char_rom NULL ipcore_dir/char_rom.v vlg13/char__rom.bin 1637043214

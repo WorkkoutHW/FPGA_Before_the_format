@@ -1,0 +1,124 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf top.ucf
+
+Design file:              top.ncd
+Physical constraint file: top.pcf
+Device,package,speed:     xc3s700an,fgg484,-4 (PRODUCTION 1.42 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CLK_50M
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+PS2C        |    0.894(R)|    0.141(R)|CLK_50M_BUFGP     |   0.000|
+PS2D        |    1.293(R)|   -0.195(R)|CLK_50M_BUFGP     |   0.000|
+RESET       |    5.738(R)|   -0.661(R)|CLK_50M_BUFGP     |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock CLK_50M to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+GPO<0>      |   13.615(R)|CLK_50M_BUFGP     |   0.000|
+GPO<1>      |   12.879(R)|CLK_50M_BUFGP     |   0.000|
+GPO<2>      |   13.716(R)|CLK_50M_BUFGP     |   0.000|
+GPO<3>      |   13.507(R)|CLK_50M_BUFGP     |   0.000|
+GPO<4>      |   14.071(R)|CLK_50M_BUFGP     |   0.000|
+GPO<5>      |   12.689(R)|CLK_50M_BUFGP     |   0.000|
+GPO<6>      |   13.195(R)|CLK_50M_BUFGP     |   0.000|
+GPO<7>      |   12.109(R)|CLK_50M_BUFGP     |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK_50M
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_50M        |   16.591|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+SW<0>          |GPO<0>         |   13.523|
+SW<0>          |GPO<1>         |   13.839|
+SW<0>          |GPO<2>         |   13.175|
+SW<0>          |GPO<3>         |   12.924|
+SW<0>          |GPO<4>         |   15.661|
+SW<0>          |GPO<5>         |   14.165|
+SW<0>          |GPO<6>         |   14.052|
+SW<0>          |GPO<7>         |   13.613|
+SW<1>          |GPO<0>         |   12.859|
+SW<1>          |GPO<1>         |   12.499|
+SW<1>          |GPO<2>         |   11.930|
+SW<1>          |GPO<3>         |   12.205|
+SW<1>          |GPO<4>         |   14.145|
+SW<1>          |GPO<5>         |   12.966|
+SW<1>          |GPO<6>         |   13.611|
+SW<1>          |GPO<7>         |   12.893|
+SW<2>          |GPO<0>         |   13.194|
+SW<2>          |GPO<1>         |   13.248|
+SW<2>          |GPO<2>         |   12.445|
+SW<2>          |GPO<3>         |   12.888|
+SW<2>          |GPO<4>         |   14.635|
+SW<2>          |GPO<5>         |   13.725|
+SW<2>          |GPO<6>         |   13.546|
+SW<2>          |GPO<7>         |   12.589|
+SW<3>          |GPO<0>         |   13.807|
+SW<3>          |GPO<1>         |   12.940|
+SW<3>          |GPO<2>         |   12.640|
+SW<3>          |GPO<3>         |   13.172|
+SW<3>          |GPO<4>         |   15.392|
+SW<3>          |GPO<5>         |   12.447|
+SW<3>          |GPO<6>         |   12.959|
+SW<3>          |GPO<7>         |   11.893|
+---------------+---------------+---------+
+
+
+Analysis completed Thu Dec 02 16:29:28 2021 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4544 MB
+
+
+

@@ -1,0 +1,3 @@
+MO vga NULL vga_char_rom_map.v vlg6A/vga.bin 1637038581
+MO map_rom NULL ipcore_dir/map_rom.v vlg77/map__rom.bin 1637038581
+MO char_rom NULL ipcore_dir/char_rom.v vlg13/char__rom.bin 1637038581

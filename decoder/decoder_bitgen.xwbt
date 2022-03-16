@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\FPGA\decoder\decoder.ncd
+OUTFILE=C:\FPGA\decoder\decoder.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s700an-4fgg484
+WORKINGDIR=C:\FPGA\decoder
+LICENSE=WebPack
+USER_INFO=212302188_0_0_511

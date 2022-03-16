@@ -1,0 +1,95 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Map Application Log File for Design 'top'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr
+off -c 100 -o top_map.ncd top.ngd top.pcf 
+Target Device  : xc3s700an
+Target Package : fgg484
+Target Speed   : -4
+Mapper Version : spartan3a -- $Revision: 1.55 $
+Mapped Date    : Thu Dec 02 16:28:46 2021
+
+Mapping design into LUTs...
+Running directed packing...
+Running delay-based LUT packing...
+Running related packing...
+Updating timing models...
+WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
+   block:<vga/char_rom/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[0].ram.r/s3a_init.ram/dpram.ram>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA1> on
+   block:<vga/char_rom/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[0].ram.r/s3a_init.ram/dpram.ram>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA2> on
+   block:<vga/char_rom/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[0].ram.r/s3a_init.ram/dpram.ram>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA3> on
+   block:<vga/char_rom/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[0].ram.r/s3a_init.ram/dpram.ram>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA4> on
+   block:<vga/char_rom/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[0].ram.r/s3a_init.ram/dpram.ram>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA5> on
+   block:<vga/char_rom/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[0].ram.r/s3a_init.ram/dpram.ram>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA6> on
+   block:<vga/char_rom/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[0].ram.r/s3a_init.ram/dpram.ram>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DIA7> on
+   block:<vga/char_rom/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/va
+   lid.cstr/ramloop[0].ram.r/s3a_init.ram/dpram.ram>:<RAMB16BWE_RAMB16BWE>.
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:    8
+Logic Utilization:
+  Number of Slice Flip Flops:           207 out of  11,776    1%
+  Number of 4 input LUTs:               585 out of  11,776    4%
+Logic Distribution:
+  Number of occupied Slices:            373 out of   5,888    6%
+    Number of Slices containing only related logic:     373 out of     373 100%
+    Number of Slices containing unrelated logic:          0 out of     373   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:         605 out of  11,776    5%
+    Number used as logic:               568
+    Number used as a route-thru:         20
+    Number used as Shift registers:      17
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 30 out of     372    8%
+  Number of BUFGMUXs:                     2 out of      24    8%
+  Number of RAMB16BWEs:                   5 out of      20   25%
+
+Average Fanout of Non-Clock Nets:                4.18
+
+Peak Memory Usage:  4437 MB
+Total REAL time to MAP completion:  3 secs 
+Total CPU time to MAP completion:   2 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "top_map.mrp" for details.

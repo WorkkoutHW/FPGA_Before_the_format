@@ -1,0 +1,18 @@
+NET "clk"	 LOC = "E12"; 
+NET "leds<0>" LOC = "R20";
+NET "leds<1>" LOC = "T19";
+#NET "leds<2>" LOC = "U20";
+#NET "leds<3>" LOC = "U19";
+NET "rst" LOC = "T14";
+
+#NET "Code<0>" LOC = "V8";
+#NET "Code<1>" LOC = "U10";
+#NET "Code<2>" LOC = "U8";
+#NET "Data<0>" LOC = "R20";
+#NET "Data<1>" LOC = "T19";
+#NET "Data<2>" LOC = "U20";
+#NET "Data<3>" LOC = "U19";
+#NET "Data<4>" LOC = "V19";
+#NET "Data<5>" LOC = "V20";
+#NET "Data<6>" LOC = "Y22";
+#NET "Data<7>" LOC = "W21";

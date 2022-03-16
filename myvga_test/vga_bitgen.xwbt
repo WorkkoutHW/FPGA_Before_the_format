@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\FPGA\myvga_test\vga.ncd
+OUTFILE=C:\FPGA\myvga_test\vga.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s700an-4fgg484
+WORKINGDIR=C:\FPGA\myvga_test
+LICENSE=WebPack
+USER_INFO=212302188_0_0_511

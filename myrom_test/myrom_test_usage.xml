@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<DeviceUsageSummary rev="2">
+<DesignStatistics TimeStamp="Mon Nov 08 22:03:55 2021"><group name="NetStatistics">
+<item name="NumNets_Active" rev="2">
+<attrib name="value" value="25"/></item>
+<item name="NumNets_Gnd" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="NumNets_Vcc" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="NumNodesOfType_Active_BRAMADDR" rev="2">
+<attrib name="value" value="6"/></item>
+<item name="NumNodesOfType_Active_BRAMDUMMY" rev="2">
+<attrib name="value" value="8"/></item>
+<item name="NumNodesOfType_Active_CLKPIN" rev="2">
+<attrib name="value" value="2"/></item>
+<item name="NumNodesOfType_Active_DOUBLE" rev="2">
+<attrib name="value" value="23"/></item>
+<item name="NumNodesOfType_Active_DUMMY" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="NumNodesOfType_Active_DUMMYBANK" rev="2">
+<attrib name="value" value="6"/></item>
+<item name="NumNodesOfType_Active_DUMMYESC" rev="2">
+<attrib name="value" value="4"/></item>
+<item name="NumNodesOfType_Active_GLOBAL" rev="2">
+<attrib name="value" value="5"/></item>
+<item name="NumNodesOfType_Active_HUNIHEX" rev="2">
+<attrib name="value" value="13"/></item>
+<item name="NumNodesOfType_Active_INPUT" rev="2">
+<attrib name="value" value="15"/></item>
+<item name="NumNodesOfType_Active_IOBOUTPUT" rev="2">
+<attrib name="value" value="4"/></item>
+<item name="NumNodesOfType_Active_OMUX" rev="2">
+<attrib name="value" value="7"/></item>
+<item name="NumNodesOfType_Active_OUTPUT" rev="2">
+<attrib name="value" value="9"/></item>
+<item name="NumNodesOfType_Active_VUNIHEX" rev="2">
+<attrib name="value" value="6"/></item>
+<item name="NumNodesOfType_Gnd_BRAMADDR" rev="2">
+<attrib name="value" value="11"/></item>
+<item name="NumNodesOfType_Gnd_BRAMDUMMY" rev="2">
+<attrib name="value" value="10"/></item>
+<item name="NumNodesOfType_Gnd_DOUBLE" rev="2">
+<attrib name="value" value="6"/></item>
+<item name="NumNodesOfType_Gnd_DUMMYBANK" rev="2">
+<attrib name="value" value="4"/></item>
+<item name="NumNodesOfType_Gnd_INPUT" rev="2">
+<attrib name="value" value="21"/></item>
+<item name="NumNodesOfType_Gnd_OMUX" rev="2">
+<attrib name="value" value="3"/></item>
+<item name="NumNodesOfType_Gnd_OUTPUT" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="NumNodesOfType_Gnd_VFULLHEX" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="NumNodesOfType_Vcc_BRAMADDR" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="NumNodesOfType_Vcc_BRAMDUMMY" rev="2">
+<attrib name="value" value="2"/></item>
+<item name="NumNodesOfType_Vcc_CNTRLPIN" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="NumNodesOfType_Vcc_INPUT" rev="2">
+<attrib name="value" value="3"/></item>
+<item name="NumNodesOfType_Vcc_VCCOUT" rev="2">
+<attrib name="value" value="2"/></item>
+</group>
+<group name="SiteStatistics">
+<item name="IBUF-DIFFSTB" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="IOB-DIFFMLR" rev="2">
+<attrib name="value" value="4"/></item>
+<item name="IOB-DIFFSLR" rev="2">
+<attrib name="value" value="4"/></item>
+</group>
+<group name="MiscellaneousStatistics">
+<item name="AGG_BONDED_IO" rev="1">
+<attrib name="value" value="12"/></item>
+<item name="AGG_IO" rev="1">
+<attrib name="value" value="12"/></item>
+<item name="NUM_BONDED_IBUF" rev="1">
+<attrib name="value" value="4"/></item>
+<item name="NUM_BONDED_IOB" rev="1">
+<attrib name="value" value="8"/></item>
+<item name="NUM_BUFGMUX" rev="1">
+<attrib name="value" value="1"/></item>
+<item name="NUM_RAMB16BWE" rev="1">
+<attrib name="value" value="1"/></item>
+<item name="Xilinx Core blk_mem_gen_v7_3, Xilinx CORE Generator 14.7" rev="1">
+<attrib name="value" value="1"/></item>
+</group>
+</DesignStatistics>
+<DeviceUsage TimeStamp="Mon Nov 08 22:03:55 2021"><group name="SiteSummary">
+<item name="BUFGMUX" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
+<item name="BUFGMUX_GCLKMUX" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
+<item name="BUFGMUX_GCLK_BUFFER" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
+<item name="IBUF" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="4"/></item>
+<item name="IBUF_DELAY_ADJ_BBOX" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="4"/></item>
+<item name="IBUF_INBUF" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="4"/></item>
+<item name="IBUF_PAD" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="4"/></item>
+<item name="IOB" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="8"/></item>
+<item name="IOB_OUTBUF" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="8"/></item>
+<item name="IOB_PAD" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="8"/></item>
+<item name="RAMB16BWE" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
+<item name="RAMB16BWE_RAMB16BWE" rev="2">
+<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
+</group>
+</DeviceUsage>
+<ReportConfigData TimeStamp="Mon Nov 08 22:03:55 2021"><group name="IBUF_PAD">
+<item name="IOATTRBOX" rev="2">
+<attrib name="LVCMOS25" value="4"/></item>
+</group>
+<group name="IOB_OUTBUF">
+<item name="IN" rev="2">
+<attrib name="IN_INV" value="0"/><attrib name="IN" value="8"/></item>
+<item name="SUSPEND" rev="2">
+<attrib name="3STATE" value="8"/></item>
+</group>
+<group name="BUFGMUX_GCLKMUX">
+<item name="DISABLE_ATTR" rev="2">
+<attrib name="LOW" value="1"/></item>
+<item name="S" rev="2">
+<attrib name="S_INV" value="1"/><attrib name="S" value="0"/></item>
+</group>
+<group name="RAMB16BWE_RAMB16BWE">
+<item name="CLKA" rev="2">
+<attrib name="CLKA_INV" value="0"/><attrib name="CLKA" value="1"/></item>
+<item name="CLKB" rev="2">
+<attrib name="CLKB_INV" value="0"/><attrib name="CLKB" value="1"/></item>
+<item name="DATA_WIDTH_A" rev="2">
+<attrib name="36" value="1"/></item>
+<item name="DATA_WIDTH_B" rev="2">
+<attrib name="36" value="1"/></item>
+<item name="ENA" rev="2">
+<attrib name="ENA_INV" value="0"/><attrib name="ENA" value="1"/></item>
+<item name="ENB" rev="2">
+<attrib name="ENB_INV" value="0"/><attrib name="ENB" value="1"/></item>
+<item name="SSRA" rev="2">
+<attrib name="SSRA_INV" value="0"/><attrib name="SSRA" value="1"/></item>
+<item name="SSRB" rev="2">
+<attrib name="SSRB_INV" value="0"/><attrib name="SSRB" value="1"/></item>
+<item name="WEA0" rev="2">
+<attrib name="WEA0" value="1"/><attrib name="WEA0_INV" value="0"/></item>
+<item name="WEA1" rev="2">
+<attrib name="WEA1" value="1"/><attrib name="WEA1_INV" value="0"/></item>
+<item name="WEA2" rev="2">
+<attrib name="WEA2" value="1"/><attrib name="WEA2_INV" value="0"/></item>
+<item name="WEA3" rev="2">
+<attrib name="WEA3_INV" value="0"/><attrib name="WEA3" value="1"/></item>
+<item name="WEB0" rev="2">
+<attrib name="WEB0" value="1"/><attrib name="WEB0_INV" value="0"/></item>
+<item name="WEB1" rev="2">
+<attrib name="WEB1" value="1"/><attrib name="WEB1_INV" value="0"/></item>
+<item name="WEB2" rev="2">
+<attrib name="WEB2_INV" value="0"/><attrib name="WEB2" value="1"/></item>
+<item name="WEB3" rev="2">
+<attrib name="WEB3" value="1"/><attrib name="WEB3_INV" value="0"/></item>
+<item name="WRITE_MODE_A" rev="2">
+<attrib name="WRITE_FIRST" value="1"/></item>
+<item name="WRITE_MODE_B" rev="2">
+<attrib name="WRITE_FIRST" value="1"/></item>
+</group>
+<group name="IBUF_DELAY_ADJ_BBOX">
+<item name="DELAY_ADJ_ATTRBOX" rev="2">
+<attrib name="FIXED" value="4"/></item>
+<item name="IBUF_DELAY_VALUE" rev="2">
+<attrib name="DLY0" value="4"/></item>
+<item name="IFD_DELAY_VALUE" rev="2">
+<attrib name="DLY0" value="4"/></item>
+<item name="SEL_IN" rev="2">
+<attrib name="SEL_IN" value="4"/><attrib name="SEL_IN_INV" value="0"/></item>
+</group>
+<group name="IOB_PAD">
+<item name="DRIVEATTRBOX" rev="2">
+<attrib name="12" value="8"/></item>
+<item name="IOATTRBOX" rev="2">
+<attrib name="LVCMOS25" value="8"/></item>
+<item name="SLEW" rev="2">
+<attrib name="SLOW" value="8"/></item>
+</group>
+<group name="RAMB16BWE">
+<item name="CLKA" rev="2">
+<attrib name="CLKA_INV" value="0"/><attrib name="CLKA" value="1"/></item>
+<item name="CLKB" rev="2">
+<attrib name="CLKB_INV" value="0"/><attrib name="CLKB" value="1"/></item>
+<item name="ENA" rev="2">
+<attrib name="ENA_INV" value="0"/><attrib name="ENA" value="1"/></item>
+<item name="ENB" rev="2">
+<attrib name="ENB_INV" value="0"/><attrib name="ENB" value="1"/></item>
+<item name="SSRA" rev="2">
+<attrib name="SSRA_INV" value="0"/><attrib name="SSRA" value="1"/></item>
+<item name="SSRB" rev="2">
+<attrib name="SSRB_INV" value="0"/><attrib name="SSRB" value="1"/></item>
+<item name="WEA0" rev="2">
+<attrib name="WEA0" value="1"/><attrib name="WEA0_INV" value="0"/></item>
+<item name="WEA1" rev="2">
+<attrib name="WEA1" value="1"/><attrib name="WEA1_INV" value="0"/></item>
+<item name="WEA2" rev="2">
+<attrib name="WEA2" value="1"/><attrib name="WEA2_INV" value="0"/></item>
+<item name="WEA3" rev="2">
+<attrib name="WEA3_INV" value="0"/><attrib name="WEA3" value="1"/></item>
+<item name="WEB0" rev="2">
+<attrib name="WEB0" value="1"/><attrib name="WEB0_INV" value="0"/></item>
+<item name="WEB1" rev="2">
+<attrib name="WEB1" value="1"/><attrib name="WEB1_INV" value="0"/></item>
+<item name="WEB2" rev="2">
+<attrib name="WEB2_INV" value="0"/><attrib name="WEB2" value="1"/></item>
+<item name="WEB3" rev="2">
+<attrib name="WEB3" value="1"/><attrib name="WEB3_INV" value="0"/></item>
+</group>
+<group name="IOB">
+<item name="O1" rev="2">
+<attrib name="O1_INV" value="0"/><attrib name="O1" value="8"/></item>
+</group>
+<group name="BUFGMUX">
+<item name="S" rev="2">
+<attrib name="S_INV" value="1"/><attrib name="S" value="0"/></item>
+</group>
+</ReportConfigData>
+<ReportPinData TimeStamp="Mon Nov 08 22:03:55 2021"><group name="IBUF_PAD">
+<item name="PAD" rev="2">
+<attrib name="value" value="4"/></item>
+</group>
+<group name="IBUF_INBUF">
+<item name="IN" rev="2">
+<attrib name="value" value="4"/></item>
+<item name="OUT" rev="2">
+<attrib name="value" value="4"/></item>
+</group>
+<group name="BUFGMUX_GCLK_BUFFER">
+<item name="IN" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="OUT" rev="2">
+<attrib name="value" value="1"/></item>
+</group>
+<group name="IOB_OUTBUF">
+<item name="IN" rev="2">
+<attrib name="value" value="8"/></item>
+<item name="OUT" rev="2">
+<attrib name="value" value="8"/></item>
+</group>
+<group name="IBUF">
+<item name="I" rev="2">
+<attrib name="value" value="4"/></item>
+<item name="PAD" rev="2">
+<attrib name="value" value="4"/></item>
+</group>
+<group name="BUFGMUX_GCLKMUX">
+<item name="I0" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="OUT" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="S" rev="2">
+<attrib name="value" value="1"/></item>
+</group>
+<group name="RAMB16BWE_RAMB16BWE">
+<item name="ADDRA10" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRA11" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRA12" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRA13" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRA5" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRA6" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRA7" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRA8" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRA9" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRB10" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRB11" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRB12" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRB13" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRB5" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRB6" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRB7" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRB8" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRB9" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="CLKA" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="CLKB" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="DOA0" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="DOA16" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="DOA24" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="DOA8" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="DOB0" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="DOB16" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="DOB24" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="DOB8" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ENA" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ENB" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="SSRA" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="SSRB" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="WEA0" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="WEA1" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="WEA2" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="WEA3" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="WEB0" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="WEB1" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="WEB2" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="WEB3" rev="2">
+<attrib name="value" value="1"/></item>
+</group>
+<group name="IBUF_DELAY_ADJ_BBOX">
+<item name="IBUF_OUT" rev="2">
+<attrib name="value" value="4"/></item>
+<item name="SEL_IN" rev="2">
+<attrib name="value" value="4"/></item>
+</group>
+<group name="IOB_PAD">
+<item name="PAD" rev="2">
+<attrib name="value" value="8"/></item>
+</group>
+<group name="RAMB16BWE">
+<item name="ADDRA10" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRA11" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRA12" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRA13" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRA5" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRA6" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRA7" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRA8" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRA9" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRB10" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRB11" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRB12" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRB13" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRB5" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRB6" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRB7" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRB8" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ADDRB9" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="CLKA" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="CLKB" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="DOA0" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="DOA16" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="DOA24" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="DOA8" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="DOB0" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="DOB16" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="DOB24" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="DOB8" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ENA" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="ENB" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="SSRA" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="SSRB" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="WEA0" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="WEA1" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="WEA2" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="WEA3" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="WEB0" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="WEB1" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="WEB2" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="WEB3" rev="2">
+<attrib name="value" value="1"/></item>
+</group>
+<group name="IOB">
+<item name="O1" rev="2">
+<attrib name="value" value="8"/></item>
+<item name="PAD" rev="2">
+<attrib name="value" value="8"/></item>
+</group>
+<group name="BUFGMUX">
+<item name="I0" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="O" rev="2">
+<attrib name="value" value="1"/></item>
+<item name="S" rev="2">
+<attrib name="value" value="1"/></item>
+</group>
+</ReportPinData>
+<CmdHistory>
+</CmdHistory>
+</DeviceUsageSummary>

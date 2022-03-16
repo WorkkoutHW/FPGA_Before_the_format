@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=C:\FPGA\cnt28bit\impact.xsl
+OUTFILE=C:\FPGA\cnt28bit\impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=C:\FPGA\cnt28bit
+LICENSE=iMPACT
+USER_INFO=iMPACT

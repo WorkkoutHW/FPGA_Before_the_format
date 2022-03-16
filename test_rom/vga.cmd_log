@@ -1,0 +1,13 @@
+xst -intstyle ise -ifn "C:/FPGA/test_rom/vga.xst" -ofn "C:/FPGA/test_rom/vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_char_rom.ucf -p xc3s700an-fgg484-4 vga.ngc vga.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o vga_map.ncd vga.ngd vga.pcf 
+par -w -intstyle ise -ol high -t 1 vga_map.ncd vga.ncd vga.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga.twx vga.ncd -o vga.twr vga.pcf -ucf vga_char_rom.ucf 
+bitgen -intstyle ise -f vga.ut vga.ncd 
+xst -intstyle ise -ifn "C:/FPGA/test_rom/vga.xst" -ofn "C:/FPGA/test_rom/vga.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_char_rom.ucf -i -p xc3s700an-fgg484-4 vga.ngc vga.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_char_rom.ucf -p xc3s700an-fgg484-4 vga.ngc vga.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o vga_map.ncd vga.ngd vga.pcf 
+par -w -intstyle ise -ol high -t 1 vga_map.ncd vga.ncd vga.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga.twx vga.ncd -o vga.twr vga.pcf -ucf vga_char_rom.ucf 
+bitgen -intstyle ise -f vga.ut vga.ncd 
